@@ -5,3 +5,11 @@ Behavior Driven Development (BDD) é um framework de desenvolvimento ágil que a
 
 ### Porque BDD existe?
 O BDD foi criado para mitigar as falhas de comunicação dentro de uma equipe, para que os contextos dos requisitos não sejam perdidos, ou alterados, pelo que chamamos  "telefone sem fio", onde um requisito chega para equipe e acaba sendo desenvolvido de forma diferente ao planejado, causando perda de tempo, e consequentemente dinheiro, além, de frustração no cliente e todo o time de negócios que agora tera que renegociar com o cliente. 
+
+### Processos do BDD
+
+#### Reunião
+Nós vemos diariamente uma comunicação onde uma feature chega na equipe atrás do product ower que repassa isso ao analista de negócio que separa as user stories que será desenvolvida e testada, porem, como já dito anteriormente, existe o "telefone sem fio", então, um dos processos de BDD é uma reunião de abertura com todos os envolvidos no processo, haverá a apresentação dos requisitos, onde, todos podem fazer perguntas para sanar as dúvidas 
+
+#### Formalização
+O resultado da reunião é um documento onde são descritos os critérios de aceitação para os cenários possíveis, o Given-When-Then (Dado-Quando-Então), onde é dado ações e resultados esperados, serão posteriormente repassados para código-fonte, esses cenários iram ajudar os desenvolvedores na criação da feature e testados, criando validações mais precisas através da automação dos testes dos cenários.
