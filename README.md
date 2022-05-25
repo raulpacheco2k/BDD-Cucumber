@@ -19,3 +19,7 @@ Então é realizado a automação dos possíveis cenários relatados na reunião
 
 #### Validação
 Após feature implementada e validade pelo time de testes, corre a validação por quem propôs a feature, no caso, o product owner ou analista de negócios, onde irão verificar a feature implementada e sugerir possíveis ajustes.
+
+<p align="center">
+  <img height="150px" src="https://github.com/raulpacheco2k/BDD-Java/blob/main/docs/Diagrama%20de%20fluxo%20BDD.svg?raw=true" />
+</p>
