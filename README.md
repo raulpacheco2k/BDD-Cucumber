@@ -13,3 +13,9 @@ Nós vemos diariamente uma comunicação onde uma feature chega na equipe atrás
 
 #### Formalização
 O resultado da reunião é um documento onde são descritos os critérios de aceitação para os cenários possíveis, o Given-When-Then (Dado-Quando-Então), onde é dado ações e resultados esperados, serão posteriormente repassados para código-fonte, esses cenários iram ajudar os desenvolvedores na criação da feature e testados, criando validações mais precisas através da automação dos testes dos cenários.
+
+#### Automação
+Então é realizado a automação dos possíveis cenários relatados na reunião e formalizados, usando Cucumber, Gherkin e TDD.
+
+#### Validação
+Após feature implementada e validade pelo time de testes, corre a validação por quem propôs a feature, no caso, o product owner ou analista de negócios, onde irão verificar a feature implementada e sugerir possíveis ajustes.
