@@ -14,11 +14,46 @@ Nós vemos diariamente uma comunicação onde uma feature chega na equipe atrás
 #### Formalização
 O resultado da reunião é um documento onde são descritos os critérios de aceitação para os cenários possíveis, o Given-When-Then (Dado-Quando-Então), onde é dado ações e resultados esperados, serão posteriormente repassados para código-fonte, esses cenários iram ajudar os desenvolvedores na criação da feature e testados, criando validações mais precisas através da automação dos testes dos cenários.
 
+```gherkin
+Given That I'm on the Google homepage
+When type George W. Bush
+  And click search
+Then a summary about the president is displayed
+```
+
 #### Automação
-Então é realizado a automação dos possíveis cenários relatados na reunião e formalizados, usando Cucumber, Gherkin e TDD.
+Então é realizado a automação dos possíveis cenários relatados e formalizados durante reunião, usando Cucumber e Gherkin em uma linguagem de programação.
+
+```java
+@io.cucumber.java.en.Given("That I'm on the Google homepage")
+public void thatIMOnTheGoogleHomepage() {
+    this.googlePage = new GooglePage();
+    this.googlePage.beforeEach();
+}
+
+@When("type {string}")
+public void iTypeGeorgeWBush(String text) {
+    this.googlePage.fillSearchInput(text);
+}
+
+@And("click search")
+public void iClickSearch() {
+    this.googleSearchPage = this.googlePage.search();
+}
+
+@Then("a summary about the president is displayed")
+public void aSummaryAboutTheTermIsDisplayed(
+) {
+    Assert.assertEquals(
+            "George Walker Bush, /ˈdʒɔrdʒ ˈwɔːkər ˈbʊʃ/; é um político estadunidense que serviu como o 43.º Presidente dos Estados Unidos, de 2001 a 2009, e como o 46.º Governador do Texas, entre 1995 a 2000. Bush faz parte de uma proeminente família política dos Estados Unidos. É o filho mais velho de George H. W.",
+            this.googleSearchPage.getPageDescription()
+    );
+    this.googleSearchPage.afterEach();
+}
+```
 
 #### Validação
-Após feature implementada e validade pelo time de testes, corre a validação por quem propôs a feature, no caso, o product owner ou analista de negócios, onde irão verificar a feature implementada e sugerir possíveis ajustes.
+Após feature implementada e validade pelo time de testes, ocorre a validação por quem propôs a feature, no caso, o product owner ou analista de negócios, onde irão verificar a feature implementada e sugerir possíveis ajustes.
 
 <p align="center">
   <img height="150px" src="./docs/Diagrama%20de%20fluxo%20BDD.svg?raw=true" />
