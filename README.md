@@ -42,10 +42,12 @@ public void iClickSearch() {
 }
 
 @Then("a summary about the president is displayed")
-public void aSummaryAboutTheTermIsDisplayed(
-) {
+public void aSummaryAboutTheTermIsDisplayed() {
     Assert.assertEquals(
-            "George Walker Bush, /ˈdʒɔrdʒ ˈwɔːkər ˈbʊʃ/; é um político estadunidense que serviu como o 43.º Presidente dos Estados Unidos, de 2001 a 2009, e como o 46.º Governador do Texas, entre 1995 a 2000. Bush faz parte de uma proeminente família política dos Estados Unidos. É o filho mais velho de George H. W.",
+            "George Walker Bush, /ˈdʒɔrdʒ ˈwɔːkər ˈbʊʃ/; é um político estadunidense que serviu como o " +
+            "43.º Presidente dos Estados Unidos, de 2001 a 2009, e como o 46.º Governador do Texas, " +
+            "entre 1995 a 2000. Bush faz parte de uma proeminente família política dos Estados Unidos. " +
+            "É o filho mais velho de George H. W.",
             this.googleSearchPage.getPageDescription()
     );
     this.googleSearchPage.afterEach();
