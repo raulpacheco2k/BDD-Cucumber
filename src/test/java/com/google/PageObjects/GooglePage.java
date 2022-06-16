@@ -11,9 +11,8 @@ public class GooglePage extends PageObject {
         super("https://www.google.com");
     }
 
-    public GooglePage fillSearchInput(String string) {
+    public void fillSearchInput(String string) {
         this.webDriver.findElement(this.searchInputBy).sendKeys(string);
-        return this;
     }
 
     public GoogleSearchPage search() {
