@@ -2,6 +2,7 @@ package com.google.PageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class PageObject {
 
@@ -10,7 +11,9 @@ public class PageObject {
 
     public PageObject(String url) {
         System.setProperty("webdriver.chrome.driver", "./docs/drivers/chromedriver.exe");
-        this.webDriver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless --disable-gpu");
+        this.webDriver = new ChromeDriver(chromeOptions);
         this.url = url;
     }
 
