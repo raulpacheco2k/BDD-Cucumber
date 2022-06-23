@@ -39,8 +39,8 @@ public class StepDefinitions {
         this.googleSearchPage = this.googlePage.search();
     }
 
-    @Then("a {string} about the president is displayed")
-    public void aSummaryAboutTheTermIsDisplayed(String description) {
+    @Then("a {string} about the celebrity is displayed")
+    public void aSummaryAboutThCelebrityIsDisplayed(String description) {
         Assert.assertEquals(
                 description,
                 this.googleSearchPage.getPageDescription()
