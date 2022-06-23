@@ -16,17 +16,17 @@ public class StepDefinitions {
 
     @Before
     public void before() {
-        this.googlePage.beforeEach();
+        this.googlePage = new GooglePage();
+        this.googlePage.before();
     }
 
     @After
     public void after() {
-        this.googlePage.afterEach();
+        this.googlePage.after();
     }
 
     @io.cucumber.java.en.Given("That I'm on the Google homepage")
     public void thatIMOnTheGoogleHomepage() {
-        this.googlePage = new GooglePage();
     }
 
     @When("type {string} in the search field")
@@ -45,6 +45,5 @@ public class StepDefinitions {
                 description,
                 this.googleSearchPage.getPageDescription()
         );
-        this.googleSearchPage.afterEach();
     }
 }

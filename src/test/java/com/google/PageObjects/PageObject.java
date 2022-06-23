@@ -28,12 +28,12 @@ public class PageObject {
         this.url = url;
     }
 
-    public void beforeEach() {
+    public void before() {
         this.webDriver.manage().window().maximize();
         this.webDriver.navigate().to(this.url);
     }
 
-    public void afterEach() {
+    public void after() {
         this.webDriver.quit();
     }
 
