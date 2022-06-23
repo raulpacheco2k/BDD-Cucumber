@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.time.Duration;
+
 public class PageObject {
 
     protected WebDriver webDriver;
@@ -14,6 +16,9 @@ public class PageObject {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless --disable-gpu");
         this.webDriver = new ChromeDriver(chromeOptions);
+        this.webDriver.manage().timeouts()
+                .implicitlyWait(Duration.ofSeconds(3))
+                .pageLoadTimeout(Duration.ofSeconds(10));
         this.url = url;
     }
 
