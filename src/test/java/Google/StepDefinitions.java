@@ -7,7 +7,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class StepDefinitions {
 
@@ -41,7 +41,7 @@ public class StepDefinitions {
 
     @Then("a {string} about the celebrity is displayed")
     public void aSummaryAboutThCelebrityIsDisplayed(String description) {
-        Assert.assertEquals(
+        Assertions.assertEquals(
                 description,
                 this.googleSearchPage.getPageDescription()
         );
