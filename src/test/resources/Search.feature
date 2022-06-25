@@ -1,6 +1,6 @@
 Feature: Search
 
-  Scenario Outline: : Search for a celebrity
+  Scenario Outline: Search for a celebrity
     Given That I'm on the Google homepage
     When type <celebrity> in the search field
     And click search
