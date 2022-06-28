@@ -1,10 +1,11 @@
-package Google;
+package google;
 
 import com.google.PageObjects.GooglePage;
 import com.google.PageObjects.GoogleSearchPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
@@ -25,7 +26,7 @@ public class StepDefinitions {
         this.googlePage.after();
     }
 
-    @io.cucumber.java.en.Given("That I'm on the Google homepage")
+    @Given("That I'm on the Google homepage")
     public void thatIMOnTheGoogleHomepage() {
     }
 
