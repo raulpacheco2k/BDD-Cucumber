@@ -1,7 +1,9 @@
 Feature: Search
 
-  Scenario Outline: Search for a celebrity
+  Background:
     Given That I'm on the Google homepage
+
+  Scenario Outline: Search for a celebrity
     When type <celebrity> in the search field
     And click search
     Then a <description> about the celebrity is displayed
