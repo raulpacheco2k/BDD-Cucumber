@@ -19,4 +19,8 @@ public class GooglePage extends PageObject {
         this.webDriver.findElement(this.googleSearchButtonBy).click();
         return new GoogleSearchPage(this.webDriver, webDriver.getCurrentUrl());
     }
+
+    public void goTo(String url) {
+        this.webDriver.navigate().to(url);
+    }
 }
